@@ -17,4 +17,21 @@
  
  #Buiding an Apriori Modedl of Association in Python:
  
+ #Importing the Libraries:
+ import numpy as np
+ import pandas as pd
+ import matplotlib.pyplot as plt
+ 
+ #Importing the Datasets:
+ datasets = pd.read_csv('Market_Basket_Optimisation.csv', header = None)
+ 
+ #Pre-Modelling of the Apriori Model:
+ for i in range(0,7501):
+     transaction.append([str(datasets.values[i,j]) for j in range(0,20)])
+    
+ #Implementing the Apriori Model:
+ from spyori import apriori
+ rules = apriori(transaction, min_support = 0.003, min_confidence = 0.05, min_lift = 3, min_length = 2)
+ 
+ 
 
